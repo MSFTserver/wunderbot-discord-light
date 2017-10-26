@@ -1,0 +1,12 @@
+{
+  // Bot configuration
+  "bot": {
+      "token":"<Discord Bot Token Here>",
+      "prefix": "!",
+      "debug": false
+  },
+  "moderation":{
+  "perms": ["LBRY MODS","LBRY TEAM", "ADMIN", "MODS"], // Roles that have access to all commands.
+  "logchannel": "371620338263523328" // Channel to log the bots moderation..
+  }
+}
