@@ -3,6 +3,7 @@
 Features:
 
 - Price bot displays price of lbc for currency given
+- github release bot displays release notes for current lbry-app release
 - Welcome Direct Message for new users
 - Dynamic plugin loading with permission support.
 
