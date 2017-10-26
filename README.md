@@ -18,7 +18,7 @@ Features:
 
 Create a bot and get the bot's API Token: https://discordapp.com/developers/applications/me
 
-1. Edit and rename `default.json.example` in /config to `default.json`
+1. Edit and rename `default.json.example` in `/config` to `default.json`
 2. Edit the var `ChannelID` in `/bot/modules/price.js` for the channel you want to use it in
 3. then `cd` to the wunderbot directory and then run:
 
