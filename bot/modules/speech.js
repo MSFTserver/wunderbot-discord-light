@@ -6,7 +6,7 @@ var fs = require('fs')
 //some have more info on file details of error
 var FullDebug = "true"
 //outputs response from speech, very bulk reply
-var ResponseDebug = "true"
+var ResponseDebug = "false"
 
 
 exports.commands = [
@@ -80,12 +80,10 @@ exports.speech = {
 		 var message = '`error not a valid url, please start with http or https`'
 		  console.log('invalid url provided: ' + filepath);
 		  	  msg.channel.send(message);
-	          doHelp(bot,msg,suffix);
 			  return
 		  } else {
 			  var message = '`error not a valid url, please start with http or https`'
 			  msg.channel.send(message);
-			  doHelp(bot,msg,suffix);
 			  return;
 		  }}
   
@@ -113,13 +111,11 @@ if (isUriImage(url) === false) {
 		var message = '`error not a valid image url, be sure the link includes a file type`'
 		  console.log('invalid url provided: ' + url);
 		  	  msg.channel.send(message);
-	          doHelp(bot,msg,suffix);
-			  return;
+	          return
 	} else {
 		var message = '`error not a valid image url, be sure the link includes a file type`'
 		  	  msg.channel.send(message);
-	          doHelp(bot,msg,suffix);
-			  return;
+	          return
 	}
 }
   //set third word to nsfw, with it being an optional functionality
@@ -206,11 +202,11 @@ request.post(
 		if (body.message === "no files found in request") {
 			if (FullDebug === "true") {
 		console.log("no file found: " + fullpath);
-		var message = '`Failed to upload file internally!!`\n please contact @MSFTserver#2901 or another moderator if the issue persists';
+		var message = '`Failed to upload file internally!!`\n please contact <@244245498746241025> or another moderator if the issue persists';
 		msg.channel.send(message);
 		return
 			} else {
-		var message = '`Failed to upload file internally!!`\n please contact @MSFTserver#2901 or another moderator if the issue persists';
+		var message = '`Failed to upload file internally!!`\n please contact <@244245498746241025> or another moderator if the issue persists';
 		msg.channel.send(message);
 		return
 			}
@@ -220,11 +216,11 @@ request.post(
 				if (body.message === "no name field found in request") {
 			if (FullDebug === "true") {
 		console.log("no name field found: " + imagename);
-		var message = '`Failed to upload file internally!!`\n please contact @MSFTserver#2901 or another moderator if the issue persists';
+		var message = '`Failed to upload file internally!!`\n please contact <#244245498746241025> or another moderator if the issue persists';
 		msg.channel.send(message);
 		return
 			} else {
-		var message = '`Failed to upload file internally!!`\n please contact @MSFTserver#2901 or another moderator if the issue persists';
+		var message = '`Failed to upload file internally!!`\n please contact <#244245498746241025> or another moderator if the issue persists';
 		msg.channel.send(message);
 		return
 			}
