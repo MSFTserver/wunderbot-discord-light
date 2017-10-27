@@ -1,6 +1,7 @@
 var request = require('request');
 var wget = require('wget');
 var fs = require('fs')
+let hasSpeechChannels = require('../helpers.js').hasSpeechChannels;
 //debug output "true/false" outputs same error as slack message in console if set to true
 //if set to false console will be left blank like normal
 //some have more info on file details of error
@@ -17,17 +18,24 @@ exports.speech = {
 	usage: "<name>",
 	description: "gets top claim from spee.ch, coming soon post to spee.ch",
 	process: function(bot,msg,suffix){
+
+	var ChannelID = "373251793498406912"
+	console.log(msg.channel.type)
+	if(inPrivate(msg) == 'dm') {
+    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
+    return;
+  }
+	if(!hasSpeechChannels(msg)){
+    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
+    return;
+  }
 		
-		var ChannelID = "373251793498406912"
 		
 		var command = "!speech"
 	words = suffix.trim().split(' ').filter( function(n){return n !== "";} );
           var imagename = words[0];
   
-  	  if(!inPrivateOrBotSandbox(msg)){
-    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
-    return;
-  }
+
   
   //check if image name is help, if it is then do help message
   if (imagename == "help") {
@@ -237,14 +245,14 @@ request.post(
         }
 );
 };
-
-function inPrivateOrBotSandbox(msg){
-  if((msg.channel.type == 'dm') || (msg.channel.id === ChannelID)){
-    return true;
-  }else{
-    return false;
-  }
-}
+  
+  		function inPrivate(msg){
+		  if(msg.channel.type == 'dm'){
+			return true;
+		  }else{
+			return false;
+		  }
+		}
   
     }
 }
