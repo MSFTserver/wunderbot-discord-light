@@ -42,7 +42,7 @@ exports.helpcommands = {
 		msg.channel.send( 
 		{
 		  "embed":{
-		  "description": "!what, !beta, !github, !appdownload, !daemondownload, !directories, !faq, !name, !mining, !pricestance, !publisher, !publish, !random, !referrals, !rewards, !rewardsvsreferrals, !cc, !verify, !verification, !logfile, !backup, !startup, !streamingissues, !ports, !migrate, !tipping, !email, !cli",
+		  "description": "**!what, !beta, !github, !appdownload, !daemondownload, !directories, !faq, !name, !mining, !pricestance, !publisher, !publish, !random, !referrals, !rewards, !rewardsvsreferrals, !cc, !verify, !verification, !logfile, !backup, !startup, !streamingissues, !ports, !migrate, !tipping, !email, !cli**",
 		  "color": 7976557,
 		  "author": {
 			"name": "List of Helpful LBRY Commands",

@@ -1,6 +1,6 @@
 let config = require('config');
 let permRanks = config.get('moderation');
-let speechChannels = config.get('speechbot');
+let speechBotChannels = config.get('speechbot');
 
 // Checks if user is allowed to use a command only for mods/team members
 exports.hasPerms = function(msg){
@@ -11,10 +11,11 @@ if(msg.member.roles.some(r=>permRanks.perms.includes(r.name)) ) {
 }
 }
 
-exports.hasSpeechChannels = function(msg){
-if(speechChannels.channelIDs.includes(msg.channel.id) ) {
+exports.hasSpeechBotChannels = function(msg){
+if(speechBotChannels.channels.includes(msg.channel.id) ) {
   return true;
 } else {
   return false;
 }
 }
+

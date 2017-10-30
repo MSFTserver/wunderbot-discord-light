@@ -10,6 +10,7 @@
   "logchannel": "371620338263523328" // Channel to log the bots moderation..
   }
   "speechbot":{
-  	"channelIDs": ["324399471087714315","373251793498406912","324400517075959808"]
+  	"channels": ["324399471087714315","373251793498406912","324400517075959808"], // All Channels Speechbot command works in
+	"mainchannel": "373251793498406912" // Main Speechbot channel for directing with help message
   }
 }
