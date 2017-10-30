@@ -18,17 +18,11 @@ exports.speech = {
 	usage: "<name>",
 	description: "gets top claim from spee.ch, coming soon post to spee.ch",
 	process: function(bot,msg,suffix){
-
 	var ChannelID = "373251793498406912"
-	console.log(msg.channel.type)
-	if(inPrivate(msg) == 'dm') {
-    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
-    return;
-  }
-	if(!hasSpeechChannels(msg)){
-    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
-    return;
-  }
+	if(!hasSpeechChannels(msg) && !inPrivate(msg)){
+   	 msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to speech bot.');
+   	 return;
+  	}
 		
 		
 		var command = "!speech"
@@ -245,14 +239,12 @@ request.post(
         }
 );
 };
-  
-  		function inPrivate(msg){
-		  if(msg.channel.type == 'dm'){
-			return true;
-		  }else{
-			return false;
-		  }
-		}
-  
+  function inPrivate(msg){
+  if((msg.channel.type == 'dm')){
+    return true;
+  }else{
+    return false;
+  }
+}
     }
 }

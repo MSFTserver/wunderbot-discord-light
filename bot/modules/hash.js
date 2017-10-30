@@ -1,5 +1,5 @@
 var needle = require('needle');
-
+var ChannelID = "374221161367601152"	
 exports.commands = [
 	"hash" // command that is in this file, every command needs it own export as shown below
 ]
@@ -10,8 +10,33 @@ exports.custom = [
 
 exports.timedhash = function(bot) {
     setInterval(function() {
-      sendMiningInfo(bot, msg);
+      sendMiningInfo(bot);
     }, 6 * 60 * 60 * 1000);
+	
+	function sendMiningInfo(bot) {
+  needle.get('https://explorer.lbry.io/api/v1/status', function(error, response) {
+    if (error || response.statusCode !== 200) {
+      bot.channels.get(ChannelID).send('Explorer API is not available');
+    } else {
+        var data, hashrate = "", difficulty = "", height = "";
+        data = response.body;
+        height += data.status.height;
+        hashrate += data.status.hashrate;
+        difficulty += data.status.difficulty;
+	description = "Hashrate: "+hashrate+"\n"+"Difficulty: "+difficulty+"\n"+"Current block: "+height+"\n"+"Source: https://explorer.lbry.io";
+	const embed = {
+	  "description": description,
+	  "color": 7976557,
+	  "author": {
+	    "name": "LBRY Explorer Stats",
+	    "url": "https://explorer.lbry.io",
+	    "icon_url": "https://i.imgur.com/yWf5USu.png"
+	  }
+	};
+	bot.channels.get(ChannelID).send({ embed });
+    }
+  });
+}
 }
 
 
@@ -19,12 +44,15 @@ exports.hash = {
 	usage: "",
 	description: 'Displays current Hashrate of Network',
 	process: function(bot,msg){
-		
   var command = '!hash';
   sendMiningInfo(bot, msg);
 
 
 function sendMiningInfo(bot, msg) {
+	if(!inPrivateOrBotSandbox(msg)){
+    msg.channel.send('Please use <#' + ChannelID + '> or DMs to talk to hash bot.');
+    return;
+  }
   needle.get('https://explorer.lbry.io/api/v1/status', function(error, response) {
     if (error || response.statusCode !== 200) {
       msg.channel.send('Explorer API is not available');
@@ -35,22 +63,33 @@ function sendMiningInfo(bot, msg) {
         height += data.status.height;
         hashrate += data.status.hashrate;
         difficulty += data.status.difficulty;
-
-      msg.channel.send(
-        // 'Blockchain stats:\n' +
-        'Hashrate: ' + hashrate + '\n' +
-        'Difficulty: ' + difficulty + '\n' +
-        'Current block: ' + height + '\n' +
-        '_Source: https://explorer.lbry.io_'
-      );
+	description = "Hashrate: "+hashrate+"\n"+"Difficulty: "+difficulty+"\n"+"Current block: "+height+"\n"+"Source: https://explorer.lbry.io";
+	const embed = {
+	  "description": description,
+	  "color": 7976557,
+	  "author": {
+	    "name": "LBRY Explorer Stats",
+	    "url": "https://explorer.lbry.io",
+	    "icon_url": "https://i.imgur.com/yWf5USu.png"
+	  }
+	};
+	msg.channel.send({ embed });    
     }
   });
 }
 
+function inPrivateOrBotSandbox(msg){
+  if((msg.channel.type == 'dm') || (msg.channel.id === ChannelID)){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-  
+
+
     }
 }
