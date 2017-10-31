@@ -34,7 +34,8 @@ exports.commands = [
 	"migrate",
 	"tipping",
 	"email",
-	"cli"
+	"cli",
+	"ipfstorrent"
 ]
 
 exports.helpcommands = {
@@ -505,6 +506,23 @@ const embed = {
   "author": {
     "name": "Interact with the LBRY CLI",
     "url": "https://lbry.io/faq/how-to-cli",
+    "icon_url": "https://i.imgur.com/yWf5USu.png"
+  }
+};
+msg.channel.send({ embed });
+	}
+}
+
+exports.ipfstorrent = {
+	usage: " ",
+	description: 'How is LBRY different from IPFS / BitTorrent?',
+	process: function(bot,msg){
+const embed = {
+  "description": "If you are interested in how is LBRY different from IPFS or BitTorrent, check out [lbry.io/faq/different-ipfs](https://lbry.io/faq/different-ipfs)",
+  "color": 7976557,
+  "author": {
+    "name": "How is LBRY different from IPFS / BitTorrent?",
+    "url": "https://lbry.io/faq/different-ipfs",
     "icon_url": "https://i.imgur.com/yWf5USu.png"
   }
 };
