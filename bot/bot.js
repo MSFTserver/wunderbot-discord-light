@@ -153,9 +153,7 @@ function checkMessageForCommand(msg, isEdit) {
         msg.channel.send(msgTxt);
       }
     } else {
-      msg.channel
-        .send(cmdTxt + " not recognized as a command!")
-        .then(message => message.delete(10000));
+		return
     }
   } else {
     //message isn't a command or is from us
@@ -193,5 +191,4 @@ exports.addCustomFunc = function(customFunc) {
 exports.commandCount = function() {
   return Object.keys(commands).length;
 };
-
 bot.login(config.token);

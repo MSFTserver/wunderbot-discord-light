@@ -1,5 +1,5 @@
-var config = require("config");
-rolelist = config.get("rolelist");
+let config = require("config");
+let rolelist = config.get("rolelist");
 
 exports.commands = [
   "addrole", // command that is in this file, every command needs it own export as shown below
