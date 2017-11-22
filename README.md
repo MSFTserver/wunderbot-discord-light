@@ -3,7 +3,7 @@
 (This README will be updated along with bot updates)
 
 ## Features:
-
+<h5>
 * Price bot displays price of lbc for currency given. Responds to `!price <cur>
   <amount>`
   
@@ -44,7 +44,7 @@
 * Dynamic plugin loading with permission support.
 
 * LBRY URL Linker displays lbry:// urls as open.lbry.io links to make them clickable
-
+</h5>
 ## Requirements
 
 * node > 8.0.0
