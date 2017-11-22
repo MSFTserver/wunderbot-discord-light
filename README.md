@@ -45,7 +45,9 @@
 * Dynamic plugin loading with permission support.
 
 * LBRY URL Linker displays lbry:// urls as open.lbry.io links to make them clickable
+
 </h5>
+
 ## Requirements
 
 * node > 8.0.0
