@@ -30,7 +30,10 @@
   (moderator only) Responds to `!welcome <@username>`
 
 * Spam Detection Bot to Prevent Discord Raids and Spammers
+
 * Dynamic plugin loading with permission support.
+
+* LBRY URL Linker displays lbry:// urls as open.lbry.io links to make them clickable
 
 ## Requirements
 
