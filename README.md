@@ -6,8 +6,18 @@
 
 * Price bot displays price of lbc for currency given. Responds to `!price <cur>
   <amount>`
-* Stats bot display current market stats of lbc. Responds to `!stats`
+  
+* Stats bot displays current market stats of lbc. Responds to `!stats`
+
 * Hash bot displays current hashrate of network. Responds to `!hash`
+
+* AltStats bot displays current market stats of specfied currency
+
+  Responds to `!altstats <coin>`
+
+* AltPrice bot displays current price for given coin and currency
+
+  Responds to `!altprice <coin> <currency> <amount>`
 
   Also Includes `!hash power <MH/s>` to calculate given MH/s to LBC per hr, day,
   week, month.
