@@ -4,6 +4,7 @@
 
 ## Features:
 <h5>
+
 * Price bot displays price of lbc for currency given. Responds to `!price <cur>
   <amount>`
   
