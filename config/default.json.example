@@ -80,24 +80,5 @@
       "Role1",
       "Role2"
     ]
-  },
-  "claimbot": {
-    "channels": [
-      "377938982111019010"
-    ]
-  },
-  "mongodb": {
-    "url": "mongodb://HOST:PORT/DATABASE"
-  },
-  "irc": {
-     "nickname": "nick",
-      "server": "chat.freenode.net",
-      "discordToken": "tokenhere",
-      "autoSendCommands": [
-      ["PRIVMSG", "NickServ", "IDENTIFY password"]
-      ],
-      "channelMapping": {
-         "#shared": "#lbry"
-      }
   }
 }
