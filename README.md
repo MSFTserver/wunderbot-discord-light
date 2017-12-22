@@ -9,11 +9,15 @@
 
   Responds to `!price <cur> <amount>`
 
-* Stats bot displays current market stats of lbc. Responds to `!stats`
+* Stats bot displays current market stats of lbc.
 
-* Hash bot displays current hashrate of network. Responds to `!hash`
+  Responds to `!stats`
 
-  Also Includes `!hash power <MH/s> <fiat>` to calculate given MH/s to LBC & fiat per hr, day, week, month.
+* Hash bot displays current hashrate of lbc network. Also Includes to calculate given MH/s to LBC & fiat per hr, day, week, month.
+
+  Responds to `!hash`
+
+  Responds to `!hash power <MH/s> <fiat>`
 
 * AltStats bot displays current market stats of specfied currency
 
@@ -27,7 +31,7 @@
 
   Responds to `!releasenotes`
 
-  (moderator only) `!releasenotes post` to send to specified channel
+  (moderator only) `!releasenotes post` - send to release notes channel
 
 * Purge Bot deletes X amount of messages.
 
