@@ -5,12 +5,15 @@
 ## Features:
 <h5>
 
-* Price bot displays price of lbc for currency given. Responds to `!price <cur>
-  <amount>`
-  
+* Price bot displays price of lbc for currency given.
+
+  Responds to `!price <cur> <amount>`
+
 * Stats bot displays current market stats of lbc. Responds to `!stats`
 
 * Hash bot displays current hashrate of network. Responds to `!hash`
+
+  Also Includes `!hash power <MH/s> <fiat>` to calculate given MH/s to LBC & fiat per hr, day, week, month.
 
 * AltStats bot displays current market stats of specfied currency
 
@@ -20,17 +23,16 @@
 
   Responds to `!altprice <coin> <currency> <amount>`
 
-  Also Includes `!hash power <MH/s>` to calculate given MH/s to LBC per hr, day,
-  week, month.
-
 * Github Release Notes bot displays release notes for current lbry-app release.
 
   Responds to `!releasenotes`
 
   (moderator only) `!releasenotes post` to send to specified channel
 
-* Purge Bot (moderator only) deletes X amount of messages. Responds to `!purge
-  <X>`
+* Purge Bot deletes X amount of messages.
+
+  (moderator only)  Responds to `!purge <X>`
+
 * Speech bot displays top claim from provided image name(coming soon posting to
   speech).
 
@@ -39,6 +41,18 @@
 * Welcome bot sends Direct Message when new users join,
 
   (moderator only) Responds to `!welcome <@username>`
+
+* Timeout bot assigns members the timeout roll for X-minutes where they are restricted from talking
+
+  (moderator only) Responds to `!timeout <@username> <Mins>`
+
+* Roll Setter bot allows users to assign themselves rolls
+
+  Responds to `!addrole <role-name>` - Adds to Role
+
+  Responds to `!delrole <role-name>` - Deletes from Role
+
+  Responds to `!roles` - List Available Roles
 
 * Spam Detection Bot to Prevent Discord Raids and Spammers
 
