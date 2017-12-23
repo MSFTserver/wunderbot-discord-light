@@ -1,10 +1,9 @@
-# Bot for [LBRY's Discord](https://discord.gg/tgnNHf5)
+## Bot for [LBRY's Discord](https://discord.gg/tgnNHf5)
 
 (This README will be updated along with bot updates)
 
-
-<h2>
-<details style="font-size=30px;"><summary>Features:</summary>
+<h3>
+<details style="font-size=30px;"><summary><u>Features:</u></summary>
 
 * Price bot displays price of lbc for currency given.
 
@@ -66,15 +65,15 @@
 * Dynamic plugin loading with permission support.
 
 </details>
-</h2>
+</h3>
 
-## Requirements
+### <u>Requirements</u>
 
 * node > 8.0.0
 * npm > 0.12.x
 * yarn ( install with npm install -g yarn if not installed )
 
-## Installation
+### <u>Installation</u>
 
 Create a bot and get the bot's API Token:
 https://discordapp.com/developers/applications/me
@@ -87,7 +86,7 @@ yarn install
 node bot/bot.js
 ```
 
-## Development
+### <u>Development</u>
 
 Be sure to run the command below before working on any code, this ensures
 prettier goes to work and keeps code to our standard.
