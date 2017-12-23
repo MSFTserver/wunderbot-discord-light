@@ -2,8 +2,9 @@
 
 (This README will be updated along with bot updates)
 
-## Features:
-<h5>
+
+<h2>
+<details style="font-size=30px;"><summary>Features:</summary>
 
 * Price bot displays price of lbc for currency given.
 
@@ -64,7 +65,8 @@
 
 * LBRY URL Linker displays lbry:// urls as open.lbry.io links to make them clickable
 
-</h5>
+</details>
+</h2>
 
 ## Requirements
 
