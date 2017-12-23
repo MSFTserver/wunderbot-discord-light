@@ -7,7 +7,7 @@ exports.timeout = {
   usage: "<@user> <Time-in-Min.>",
   description: "timeout a user for a given time in <minutes>",
   process: function(bot, msg, suffix) {
-    if (!hasPerms(msg)) {
+    if (!hasPerms(msg) || msg.author.bot) {
       return;
     }
     var words = suffix
