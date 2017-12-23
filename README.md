@@ -66,14 +66,14 @@
 
 </details>
 </h3>
-
-### <u>Requirements</u>
+____
+### Requirements
 
 * node > 8.0.0
 * npm > 0.12.x
 * yarn ( install with npm install -g yarn if not installed )
-
-### <u>Installation</u>
+____
+### Installation
 
 Create a bot and get the bot's API Token:
 https://discordapp.com/developers/applications/me
@@ -85,8 +85,8 @@ and run:
 yarn install
 node bot/bot.js
 ```
-
-### <u>Development</u>
+____
+### Development
 
 Be sure to run the command below before working on any code, this ensures
 prettier goes to work and keeps code to our standard.
