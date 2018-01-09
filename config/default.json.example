@@ -5,10 +5,9 @@
     "prefix": "!",
     "debug": false
   },
-  "lbrycrd": {
-    "port": 9245,
-    "user": "user",
-    "pass": "password"
+  "moderation":{
+    "perms": ["Admin","BOTS"], // Roles that have access to all commands.
+    "logchannel": "376085225962340353" // Channel to log the bots moderation..
   },
   //define channels for Commands.js usage
   "Channels": {
@@ -18,6 +17,7 @@
     "content": "377938982111019010"
   },
   "speechbot": {
+    // Channels speech bot is allowed to post in
     "channels": [
       "363089721313722387",
       "363085078403874823",
@@ -30,21 +30,26 @@
       "363084227518136322",
       "363084262028607488",
       "371620338263523328"
-    ], // Channels speech bot is allowed to post in
-    "mainchannel": "363085078403874823" // Main Speech Bot channel for directing with help message
+    ], 
+    // Main Speech Bot channel for directing with help message
+    "mainchannel": "363085078403874823" 
   },
   "pricebot": {
+    // Chanels price bot is allowed to post in
     "channels": [
       "363050205043621908",
       "369896313082478594",
       "371620338263523328"
-    ], // Chanels price bot is allowed to post in
-    "mainchannel": "363050205043621908" // Main Price Bot channel for directing with help message
+    ], 
+    // Main Price Bot channel for directing with help message
+    "mainchannel": "363050205043621908" 
   },
   "gitrelease": {
-    "channel": "370779899650375681" // Channel to send release info to using <!releasenotes post>
+    // Channel to send release info to using <!releasenotes post>
+    "channel": "370779899650375681" 
   },
   "spamdetection": {
+    // Channels excluded from Spam Detection
     "channels": [
       "363089721313722387",
       "363044238486798336",
@@ -54,28 +59,34 @@
       "372067478542745601",
       "369896313082478594",
       "371620338263523328"
-    ], // Channels excluded from Spam Detection
+    ], 
+    // Users to exclude from Spam Detection (include other bots here)
     "users": [
       "244245498746241025"
-    ] // Users to exclude from Spam Detection (include other bots here)
+    ] 
   },
   "hashbot": {
+    // Channels Hash Bot is allowed to post in
     "channels": [
       "363049669636390913",
       "369896313082478594",
       "371620338263523328"
-    ], // Channels Hash Bot is allowed to post in
-    "mainchannel": "363049669636390913" // Main Hash Bot channel for directing with help message
+    ], 
+    // Main Hash Bot channel for directing with help message
+    "mainchannel": "363049669636390913" 
   },
   "statsbot": {
+    // Channels Stats Bot is allowed to post in
     "channels": [
       "363050205043621908",
       "369896313082478594",
       "371620338263523328"
-    ], // Channels Stats Bot is allowed to post in
-    "mainchannel": "363050205043621908" // Main Stats Bot channel for directing with help message
+    ], 
+    // Main Stats Bot channel for directing with help message
+    "mainchannel": "363050205043621908" 
   },
   "rolelist": {
+    // Roles that Users can add with rolesetter bot
     "allowedroles": [
       "Role1",
       "Role2"
